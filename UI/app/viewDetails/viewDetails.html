@@ -1,0 +1,38 @@
+<div class="spaceTop"></div>
+<div class="container">
+	<div class="well">
+		<form class="form-horizontal" ng-submit="submitMember()">
+		<div style="text-align:center;"> <h3>Member Details</h3></div>
+			<div class="form-group">
+			  <label for="FirstName" class="col-md-2 col-form-label">First Name</label>
+			  <div class="col-md-4">
+			    <input type="text" ng-model="member.FirstName" name="FirstName" class="form-control"
+		               placeholder="First Name" />
+			  </div>
+			</div>
+			<div class="form-group ">
+			  <label for="LastName" class="col-md-2 col-form-label">Last Name</label>
+			  <div class="col-md-4">
+			    <input  type="text" ng-model="member.LastName" name="LastName" class="form-control"
+		                             placeholder="Last Name" />
+			  </div>
+			</div>
+			<div class="form-group">
+			  <label for="JobTitle" class="col-md-2 col-form-label">Job Title</label>
+			  <div class="col-md-4">
+			    <input type="text" ng-model="member.JobTitle" name="LastName" class="form-control"
+		                            placeholder="Job Title" />
+			  </div>
+			</div>
+
+			<div class="form-group">	
+			   <label for="JobTitle" class="col-md-2 col-form-label">&nbsp;</label>
+
+				<div class="col-md-4 center">
+			            <button  class="btn btn primary">&nbsp;<i class="glyphicon glyphicon-save"></i>Update Member Details
+						</button>
+			    </div>
+		    </div>
+		</form>
+	</div>
+</div>
