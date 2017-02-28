@@ -1,32 +1,30 @@
-# API-based application exercise with Angular 1.x and ASP.NET Web API 
+API-based application exercise with Angular 1.x and ASP.NET Web API - 
+Solution Implementation by Justin C.
 
-This is an exercise to use a JavaScript (Angular 1.x in this case) front-end to use a basic API to get data and send data updates. Following the steps below, you should use the code as a starting point to do the exercise and push the code to a new repo as your final product.
+This Repository has both the implementation of the API (API folder) and the user interface (UI Folder). 
+The steps below will guide you through setting up and running the applications from start to finish.
+1.	Fork or download the code from this repository.
+2.	Open the Solution file TestApi.sln in the API folder in Visual Studio
+3.	Successfully rebuild the solution. You might have to restore some nugget packages in order to resolve some of the dependencies
+4.	Run the project by typing F5 or Debug/Start from the menu in Visual Studio.
+5.	At this point, there should be a generic page with ASP.NET written on it. Click on the link on top that says API, it should take you to a Help page with the different endpoints. The ones that we will need are under Person. 
+ 
 
-This repo has a skeleton Angular 1.x app (/UI), and ASP.NET API app (/API). 
 
-1. Fork or download the code from this repository.
-1. Get the skeleton Angular application working.
-    1. Be sure NPM and Bower are installed
-        * Type `npm` at the command-line. If you don't have it, get it here: [NPM](https://www.npmjs.org/)
-        * Type `bower` at the command-line. If you don't have it get it here: [Bower](http://bower.io/)
-    1. Navigate to the /UI directory.
-    1. Run `npm install`
-    1. Run `npm start` to start the UI 
-    1. Navigate to http://localhost:8000/
+6.	Use a client application to make sure you can hit the endpoints, the url as you can see on the browser is: http://localhost:4001/.
+In order to get the complete list, use http://localhost:4001/api/Person for instance.
 
-1. Open the sln file in the /API directory in Visual Studio. 
-1. Create an endpoint that returns the following hard-coded data:
+7.	At this point, we can run the UI piece by navigating in the file system to the UI directory and make sure the Angular application is working
+8.	Be sure NPM and Bower are installed
+1.	Type npm at the command-line. If you don't have it, get it here: NPM
+2.	Type bower at the command-line. If you don't have it get it here: Bower
+9.	Navigate to the /UI directory.
+10.	Run npm build
+11.	Run npm install
+12.	Run npm start to start the UI
+13.	Start the debugger to make sure all the dependencies are added
+14.	In case we are missing some, run bower install 
+15.	Navigate to http://localhost:8000/
+16.	When updating, take a look at the Console in order to see if it was successful or not. 
 
-    ```
-    2 Person objects with these fields and anything for the values:
-        FirstName
-        LastName
-        JobTitle
-    ```
-1. Create an endpoint that allows updating a Person object, then display a console message with the updated values (no database querying or writing necessary).
-1. Start the Web API application and verify you can hit it. 
-1. In the Angular application, on the homepage, use an endpoint to display both people with all the fields in table format. 
-1. Use Twitter Bootstrap to make it look presentable.
-1. Allow selection of one of the people in the table, and show a form for editing of each of the fields. Allow submission of the edits to the 2nd endpoint. 
-1. Verify the updates made it to the endpoint properly with the console message.  
-1. Submit your final code to a new repo. Share it and walk through how it works from end-to-end.
+
