@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using TestApi1.Data;
+using TestApi1.Helpers;
 using TestApi1.Models.BusinessObjects;
 using TestApi1.Services.Abstract;
 
@@ -48,21 +49,27 @@ namespace TestApi1.Services.Concrete
 
         public Person Update(Person person)
         {
+            Person retValue = null;
             if (person != null && person.PersonId > 0)
             {
                 var item = GetById(person.PersonId);
-                if (item == null) return null;
+                if (item == null)
+                {
+                    retValue = null;
+                }
                 else
                 {
-                    //Update the value based on person object passed, then persist the value with a SAVE in data store.
+                    //Update the value based on person object passed, then persist the value with a SAVE in data store and log new values on Console
                     item.FirstName = person.FirstName;
                     item.LastName = person.LastName;
                     item.JobTitle = person.JobTitle;
-                    return item;
+
+                    //Log To server side console the updated values
+                    ConsoleHelper.LogToConsole(item);
+                    retValue = item;
                 }
             }
-            else
-                return null;
+            return retValue;
         }
     }
 }
